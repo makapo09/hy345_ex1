@@ -117,11 +117,11 @@ void handlePipes(char **args, int numCommands, int *cmdStarts)
     if (procId == 0)
     {
       if (i != 0)
-      { // Not the first command, use input pipe
+      { /* Not the first command, use input pipe*/
         dup2(pipeFds[pipeIndex - 2], STDIN_FILENO);
       }
       if (i != numCommands - 1)
-      { // Not the last command, use output pipe
+      { /* Not the last command, use output pipe*/
         dup2(pipeFds[pipeIndex + 1], STDOUT_FILENO);
       }
       for (int j = 0; j < 2 * (numCommands - 1); j++)
