@@ -1,1 +1,2 @@
 1. I should add "cd" command handling to change to HOME directory
+gcc -Wall -Wextra hy345sh.c -o hy345sh -g

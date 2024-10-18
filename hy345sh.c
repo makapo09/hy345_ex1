@@ -217,7 +217,7 @@ int main()
       {
         if (arguments[1] == NULL)
         {
-          chdir(getenv("HOME"));
+          chdir(getenv("~"));
         }
         else
         {
